@@ -135,7 +135,7 @@ void gameover()
     cout<<"\t\t\t=============================="<<endl;
     cout<<"\t\t\t========= GAME OVER =========="<<endl;
     cout<<"\t\t\t=============================="<<endl<<endl;   
-    cout<<"\t\t\tPress any key to go back to main menu..."<<endl;
+    cout<<"\t\t\tAppuie sur n'importe quel bouton pour revenir au menu principal..."<<endl;
     getch();
 }
 
@@ -149,11 +149,11 @@ void instructions()
     system("cls");
     cout<<"Instructions";
     cout<<"\n----------------";
-    cout<<"\n Avoid the incoming cars";
-    cout<<"\n Press 'A' to move left";
-    cout<<"\n Press 'D' to move right";
-    cout<<"\n Press 'espace' to move right";
-    cout<<"\n Press any key to go back to main menu";
+    cout<<"\n Chef, vesqui les voitures qui roulent a contre sens";
+    cout<<"\n Appuie sur 'A' pour bouger a gauche";
+    cout<<"\n Appuie sur 'D' pour bouger a droite";
+    cout<<"\n----------------";
+    cout<<"\n Touche n'importe quel touche pour retourner au menu principal";
     getch();
 
 }
@@ -172,15 +172,15 @@ void play()
     genEnemy(0);
     genEnemy(1);
 
-    gotoxy(WIN_WIDTH+7,2); cout<<"CAR GAME";
+    gotoxy(WIN_WIDTH+7,2); cout<<"VESQUI LA TCHOP";
     gotoxy(WIN_WIDTH+6,4); cout<<"----------";
     gotoxy(WIN_WIDTH+6,6); cout<<"----------";
-    gotoxy(WIN_WIDTH+7,8); cout<<"Controls";
+    gotoxy(WIN_WIDTH+7,8); cout<<"Controles";
     gotoxy(WIN_WIDTH+7,9); cout<<"----------";
-    gotoxy(WIN_WIDTH+2,10); cout<<"A - Left";
-    gotoxy(WIN_WIDTH+2,11); cout<<"D - Right";
+    gotoxy(WIN_WIDTH+2,10); cout<<"A - Gauche";
+    gotoxy(WIN_WIDTH+2,11); cout<<"D - Droite";
 
-    gotoxy(18,5); cout<<"Press any key to start";
+    gotoxy(18,5); cout<<"Touche n'importe quel touche pour debuter la partie";
     getch();
     gotoxy(18,5); cout<<"                      ";
 
@@ -266,7 +266,7 @@ int main()
     do{
         system("cls");
         gotoxy(10,5);  cout<<"=======================";
-        gotoxy(10,6);  cout<<"|      CAR GAME        |";
+        gotoxy(10,6);  cout<<"|   VESQUI LA TCHOP     |";
         gotoxy(10,7);  cout<<"=======================";
         gotoxy(10,9);  cout<<"1. Jouer au jeu";
         gotoxy(10,10); cout<<"2. Instructions";
