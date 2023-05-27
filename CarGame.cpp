@@ -3,6 +3,7 @@
 #include <dos.h>
 #include <windows.h>
 #include <time.h>
+#include <conio.h>
 
 #define SCREEN_WIDTH 90
 #define SCREEN_HEIGHT 26
@@ -16,10 +17,10 @@ COORD CursorPosition;
 int enemyX[3];
 int enemyY[3];
 int enemyFlag[3];
-char car[4][4] = { ' ','+','±',' ',
-                   '+','+','±','±',
-                   ' ','+','±',' ',
-                   '+','+','±','±' };
+char car[4][4] = { ' ','+','+',' ',
+                   '+','+','+','+',
+                   ' ','+','+',' ',
+                   '+','+','+','+' };
 
 int carPos = WIN_WIDTH / 2;
 int score = 0;
@@ -50,8 +51,8 @@ void drawBorder()
     {
         for(int j=0; j<17; j++)
         {
-            gotoxy(0+j,i); cout<<("±");
-            gotoxy(WIN_WIDTH-j,i); cout<<("±");
+            gotoxy(0+j,i); cout<<("+");
+            gotoxy(WIN_WIDTH-j,i); cout<<("+");
         }
         for(int i=0; i<SCREEN_HEIGHT; i++)
         {
@@ -185,7 +186,7 @@ void play()
 
     while(1)
     {
-        if(khbit())
+        if(kbhit())
         {
             char ch = getch();
             if(ch == 'a' || ch == 'A')
